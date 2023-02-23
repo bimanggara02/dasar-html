@@ -8,7 +8,7 @@
 </head>
 <body>
     <h2>Formulir Pendaftaran Siswa Table</h2>
-    <form action="#" method="get">
+    <form action="/simpan" method="get">
         <table>
             <tbody>
                 <tr>
@@ -70,6 +70,7 @@
                 <input type="email" name="email" id="email">
             </tbody>
         </table>
+        
     </form>
 
     <br>
@@ -95,6 +96,49 @@
                 <input type="password" name="password" id="password">
             </div>
             <button type="submit">Daftar</button>
+        </form>
+
+        <hr>
+
+        <h2>Baju</h2>
+        <form action="/baju" method="get">
+            <div>
+                <label for="baju">baju</label>
+                <input type="radio" name="baju" id="baju" value="kaos" ><label for="kaos">kaos</label>
+                <input type="radio" name="baju" id="baju" value="kemeja" checked><label for="kemeja">kemeja</label>
+            </div>
+            <div>
+                <label for="ukuran">ukuran</label>
+                <select name="ukuran" id="ukuran">
+                    <option value="s">small</option>
+                    <option value="m" selected>medium</option>
+                    <option value="l">large</option>
+                </select>
+            </div>
+            <div>
+                <label for="beli">beli</label>
+                <input type="checkbox" name="1" id="1"><label for="1">1</label>
+                <input type="checkbox" name="2" id="2" checked><label for="2">2</label>
+            </div>
+            <div>
+                <p><label for="catatan">catatan</label></p>
+                <textarea name="catatan" id="catatan" cols="30" rows="10"></textarea>
+            </div>
+            <button type="submit">submit</button>
+        </form>
+
+
+
+        <hr>
+        <form action="/kirim" method="get">
+            <h3>Validasi</h3>
+            <label for="nama">nama</label>
+            <input type="text" name="nama" id="nama" minlength="3" maxlength="6" required>
+
+            <label for="donasi">donasi</label>
+            <input type="number" name="donasi" id="donasi" required min="10000" max="1000000">
+
+            <button type="submit">kirim</button>
         </form>
 
 </body>
